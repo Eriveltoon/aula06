@@ -7,7 +7,7 @@ export default function ListVideos(){
 
     return(
         <div>
-            <h1>Total de {db.lenght} videos</h1>
+            <h1>Total de {db.length} videos</h1>
             {db.map((video) => <Video video={video}/>)}
         </div>
     )
