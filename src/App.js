@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ListaVideo from "./ListaVideo";
+import Header from "./Headers";
+import Buscar from "./Buscar";
+import {videos} from "./data/videos";
+import { VideoContext } from "./VideoContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <VideoContext.Provider value={videos}>
+        <Header />
+        <Buscar/>
+        <ListaVideo  />
+      </VideoContext.Provider>
     </div>
-  );
+  )
 }
 
 export default App;
